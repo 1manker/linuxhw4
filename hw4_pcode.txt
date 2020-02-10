@@ -1,0 +1,33 @@
+hw4_pcode
+Lucas Manker
+2/17/20
+COSC 3750, Homework 4
+
+initialize a static buffer size to use for all buffers
+
+if there is only one argument in argc then:
+   make a buffer
+   read lines from stdin and keep track of how many read with variable n
+   use fwrite to stdout with the variable n
+
+else(there are arguments)
+   
+   for each argument
+      if the argument is "-"
+         make a buffer
+         read lines from stdin and keep track of how many read with variable n
+         use fwrite to stdout with variable n
+
+      else (the argument is not "-")
+         assume this argument is a file
+         make a file pointer
+         try to open file
+         if file does not exist
+            print error message and move on
+         else if the file exists
+            make a buffer
+            read chars with stdin
+            count the chars read, store in variable n
+            use fwrite to stdout using the variable n
+
+return
